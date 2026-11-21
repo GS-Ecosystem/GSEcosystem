@@ -1,21 +1,23 @@
 <!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.7">
-    <title>GS | Ecosystem</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="lang-button.css" />
-    <link rel="stylesheet" href="id.css" />
-    <link rel="icon" href="images/GS.Ecosystem.png" type="image/png" />
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.7" />
+  <title>GS | Ecosystem — Приложения</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lang-button.css" />
+  <link rel="stylesheet" href="id.css" />
+  <link rel="stylesheet" href="card.css" />
+  <link rel="icon" href="images/GS.Ecosystem.png" type="image/png" />
+</head>
+
   <body>
     <header class="header">
       <div class="header-left"></div>
 
       <ul class="nav-menu">
         <li>
-          <a href="https://gs-ht.ru/index_en.html" class="nav-link" data-lang-key="nav-main">Main</a>
+          <a href="https://gs-ht.ru" class="nav-link" data-lang-key="nav-main">Main</a>
         </li>
         <li>
           <a href="documentation_en.html" class="nav-link" data-lang-key="nav-protocol">Documentation</a>
@@ -36,37 +38,73 @@
       </div>
       <div class="tl_main_page_container"></div>
     </header>
-        <div class="formater_cvet">
-        <h1 data-lang-key="gs-apps">GS | Applications</h1>
-        <P id="about-project">
-            GS Project apps are open source and are consistent with those found in app stores.
-        </P>
-        <h3 data-lang-key="mob-apps">Mobile Apps</h3>
-        <p id="about-project">
-            <a href="https://apkpure.com/ru/gs-http/com.proxy.gshttp" target="_blank" id="privacy-website-corrent">GS.HTTP for Android</a>
-        </p>
-        <h3 data-lang-key="desk-apps">Desktop Apps</h3>
-        <p id="about-project">
-            <a href="https://github.com/proto-gs/GS.Monitor" target="_blank" id="privacy-website-corrent">GS.Monitor for Windows/Linux</a>
-        </p>
-        <h1 data-lang-key="source">Source Code</h1>
-        <p id="about-project">
-            This code allows people and communities to audit the code and check it for security.
-        </p>
-        <h3 data-lang-key="gs-ht">GS.HTTP for Android</h3>
-        <p id="about-project">
-        The official Android app is available on <a href="https://apkpure.com/ru/gs-http/com.proxy.gshttp" target="_blank" id="privacy-website-corrent">APKPure</a><br>
-         Licensed under the <a href="LICENSE.html" target="_blank" id="privacy-website-corrent">MIT License</a><br>
-         <a href="https://github.com/proto-gs/GS.HTTP" target="_blank" id="privacy-website-corrent">GitHub</a><br>
-        </p>
-        <h3 data-lang-key="gs-mn">GS.Monitor for Windows/Linux</h3>
-        <p id="about-project">
-            Compose Jetpack/Kotlin-based application<br>
-            Licensed under the <a href="LICENSE.html" target="_blank" id="privacy-website-corrent">MIT License</a><br>
-            <a href="https://github.com/proto-gs/GS.Monitor" target="_blank" id="privacy-website-corrent">GitHub</a>
-        </p>
-    </div>
-      <br><br>
-  <p id="copyright-text">&copy 2026 Georgy Smerdov (GS Ecosystem). <br>All rights reserved.</p>
+
+    <main class="formater_cvet">
+      <h1 data-lang-key="gs-apps">GS | Applications</h1>
+      <p id="about-project" class="apps-intro">
+        GS Ecosystem apps are open source for independent security auditing and fully match the official store builds.
+      </p>
+
+      <div class="apps-grid">
+
+        <article class="app-card">
+          <div>
+            <div class="card-header">
+              <h2 class="card-title" data-lang-key="gs-ht">GS.HTTP</h2>
+              <span class="platform-badge">Android 7.0+</span>
+            </div>
+            <p class="card-desc">
+              GS HTTP is a lightweight and fast utility designed specifically for web developers, system administrators, and anyone working with APIs and network requests.
+            </p>
+            <ul class="card-features">
+              <li>Supports 9 HTTP methods: GET, POST, HEAD, PUT, etc.</li>
+              <li>Inspect HTTP status codes, headers, response body, and cookies</li>
+              <li>Flexible timeout, SSL verification, and User-Agent settings</li>
+              <li>Local request history with no external servers or data collection</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="card-meta">
+              Stack: Kotlin • License: <a href="LICENSE.html" target="_blank">MIT License</a>
+            </div>
+            <div class="card-actions">
+              <a href="https://apkpure.com" target="_blank" class="btn-card btn-primary">Download on APKPure</a>
+              <a href="https://github.com" target="_blank" class="btn-card btn-secondary">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="app-card">
+          <div>
+            <div class="card-header">
+              <h2 class="card-title" data-lang-key="gs-mn">GS.Monitor</h2>
+              <span class="platform-badge">Windows / Linux</span>
+            </div>
+            <p class="card-desc">
+              A minimalist desktop tool for analyzing HTTP traffic, debugging APIs, and inspecting network interactions on PC.
+            </p>
+            <ul class="card-features">
+              <li>Instant HTTP status and technical response header checks</li>
+              <li>Clean JSON data formatting and readability</li>
+              <li>Cookie inspection and domain lookup</li>
+              <li>Local request history with zero telemetry</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="card-meta">
+              Stack: Kotlin / Jetpack Compose • License: <a href="LICENSE.html" target="_blank">MIT License</a>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com" target="_blank" class="btn-card btn-primary">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <p id="copyright-text">&copy; 2026 Georgy Smerdov (GS Ecosystem). <br />All rights reserved.</p>
   </body>
-</html>   
+</html>

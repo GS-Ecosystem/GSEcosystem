@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.7">
-    <title>GS | Ecosystem</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="lang-button.css" />
-    <link rel="stylesheet" href="id.css" />
-    <link rel="icon" href="images/GS.Ecosystem.png" type="image/png" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.7" />
+  <title>GS | Ecosystem — Приложения</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lang-button.css" />
+  <link rel="stylesheet" href="id.css" />
+  <link rel="stylesheet" href="card.css" />
+  <link rel="icon" href="images/GS.Ecosystem.png" type="image/png" />
+</head>
+
   <body>
     <header class="header">
       <div class="header-left"></div>
@@ -36,37 +38,72 @@
       </div>
       <div class="tl_main_page_container"></div>
     </header>
-    <div class="formater_cvet">
-        <h1 data-lang-key="gs-apps">GS | Приложения</h1>
-        <P id="about-project">
-            Приложения проекта GS имеют открытый исходный код и соответствуют тем, что находятся в магазинах приложений.<br>
-        </P>
-        <h3 data-lang-key="mob-apps">Мобильные приложения</h3>
-        <p id="about-project">
-            <a href="https://www.rustore.ru/catalog/app/com.proxy.gshttp" target="_blank" id="privacy-website-corrent">GS.HTTP для Android</a><br>
-        </p>
-        <h3 data-lang-key="desk-apps">Десктопные приложения</h3>
-        <p id="about-project">
-        <a href="https://github.com/proto-gs/GS.Monitor" target="_blank" id="privacy-website-corrent">GS.Monitor для Windows/Linux</a><br>
-        </p>
-        <h1 data-lang-key="source">Исходный код</h1>
-        <p id="about-project">
-        Этот код позволяет людям и сообществам делать аудит кода и проверять его на безопасность.<br>
-        </p>
-        <h3 data-lang-key="gs-ht">GS.HTTP для Android</h3>
-        <p id="about-project">
-         Официальное приложение для андроид находится в <a href="https://www.rustore.ru/catalog/app/com.proxy.gshttp" target="_blank" id="privacy-website-corrent">RuStore</a><br>
-         Лицензирован под <a href="LICENSE.html" target="_blank" id="privacy-website-corrent">MIT License</a><br>
-         <a href="https://github.com/proto-gs/GS.HTTP" target="_blank" id="privacy-website-corrent">GitHub</a><br>
-        </p>
-        <h3 data-lang-key="gs-mn">GS.Monitor для Windows/Linux</h3>
-        <p id="about-project">
-            Приложение на базе Compose Jetpack/Kotlin<br>
-            Лицензировано под <a href="LICENSE.html" target="_blank" id="privacy-website-corrent">MIT License</a><br>
-            <a href="https://github.com/proto-gs/GS.Monitor" target="_blank" id="privacy-website-corrent">GitHub</a><br>
-        </p>
-    </div>
-          <br><br>
-  <p id="copyright-text">&copy 2026 Георгий Смердов (ГС Екосистем). <br>Все права защищены.</p>
+
+    <main class="formater_cvet">
+      <h1 data-lang-key="gs-apps">GS | Приложения</h1>
+      <p id="about-project" class="apps-intro">
+        Проекты экосистемы GS имеют открытый исходный код для свободного аудита безопасности и полностью соответствуют официальным сборкам.
+      </p>
+
+      <div class="apps-grid">
+
+        <article class="app-card">
+          <div>
+            <div class="card-header">
+              <h2 class="card-title" data-lang-key="gs-ht">GS.HTTP</h2>
+              <span class="platform-badge">Android 7+</span>
+            </div>
+            <p class="card-desc">
+              GS HTTP — это легковесная и быстрая утилита, разработанная специально для веб-разработчиков, системных администраторов и всех, кто работает с API и сетевыми запросами.
+            </p>
+            <ul class="card-features">
+              <li>Поддержка 9 методов: GET, POST, PUT, DELETE и др.</li>
+              <li>Просмотр статуса ответа, заголовков, тела и куки</li>
+              <li>Гибкая настройка таймаутов, SSL и User-Agent</li>
+              <li>Локальная история запросов без отправки на сервер</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="card-meta">
+              Стек: Kotlin • Лицензия: <a href="LICENSE.html" target="_blank">MIT License</a>
+            </div>
+            <div class="card-actions">
+              <a href="https://rustore.ru" target="_blank" class="btn-card btn-primary">Скачать в RuStore</a>
+              <a href="https://github.com" target="_blank" class="btn-card btn-secondary">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div>
+            <div class="card-header">
+              <h2 class="card-title" data-lang-key="gs-mn">GS.Monitor</h2>
+              <span class="platform-badge">Windows / Linux</span>
+            </div>
+            <p class="card-desc">
+              Минималистичный десктопный инструмент для анализа HTTP-трафика, отладки API и контроля сетевых взаимодействий на ПК.
+            </p>
+            <ul class="card-features">
+              <li>Мгновенная проверка HTTP-статусов и заголовков</li>
+              <li>Удобное форматирование и чтение JSON-ответов</li>
+              <li>Анализ файлов cookie и поиск доменов</li>
+              <li>Локальное хранение истории без телеметрии</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="card-meta">
+              Стек: Kotlin / Jetpack Compose • Лицензия: <a href="LICENSE.html" target="_blank">MIT License</a>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com" target="_blank" class="btn-card btn-primary">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <p id="copyright-text">&copy; 2026 Георгий Смердов (ГС Экосистем). <br />Все права защищены.</p>
   </body>
-</html> 
+</html>

@@ -16,7 +16,7 @@ const translations = {
     "desk-apps": "Десктопные приложения",
     "source": "Исходный код",
     "gs-ht": "GS.HTTP для Android",
-    "gs-mn": "GS.Monitor для Windows/Linux",
+    "gs-mn": "GS.HTTP.Desktop для Windows/Linux",
   },
   en: {
     "nav-main": "Main",
@@ -35,7 +35,7 @@ const translations = {
     "desk-apps": "Desktop applications",
     "source": "Source code",
     "gs-ht": "GS.HTTP for Android",
-    "gs-mn": "GS.Monitor for Windows/Linux",
+    "gs-mn": "GS.HTTP.Desktop for Windows/Linux",
     
   },
 };
